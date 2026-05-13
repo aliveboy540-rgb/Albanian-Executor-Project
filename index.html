@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Albanian Executor</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="app-header">
+      <div class="title-block">
+        <div class="app-icon" id="appIcon">A</div>
+        <div>
+          <h1>Albanian Executor</h1>
+          <p>Mock script executor interface with search, save, execute, server actions, and simulated injection behavior.</p>
+        </div>
+      </div>
+      <div class="icon-controls">
+        <label>Icon Color
+          <input type="color" id="iconColor" value="#4A90E2" />
+        </label>
+        <label>Icon Size
+          <input type="range" id="iconSize" min="40" max="120" value="72" />
+          <span id="iconSizeValue">72px</span>
+        </label>
+      </div>
+    </header>
+
+    <section class="panel">
+      <h2>Search Scripts</h2>
+      <div class="search-row">
+        <input type="text" id="scriptSearch" placeholder="Search available scripts..." />
+      </div>
+      <div id="scriptList" class="script-list"></div>
+    </section>
+
+    <section class="panel panel-grid">
+      <div class="panel-block">
+        <h2>Manual Script Area</h2>
+        <textarea id="manualScript" placeholder="Paste or type your script here..."></textarea>
+        <div class="button-row">
+          <button id="executeManual">Execute</button>
+          <button id="clearManual">Clear</button>
+        </div>
+      </div>
+
+      <div class="panel-block">
+        <h2>Save Script</h2>
+        <input type="text" id="saveScriptName" placeholder="Script name" />
+        <textarea id="saveScriptContent" placeholder="Script content to save..."></textarea>
+        <button id="saveScriptButton">Save Script</button>
+        <div class="saved-scripts" id="savedScripts"></div>
+      </div>
+    </section>
+
+    <section class="panel server-panel">
+      <h2>Server Actions</h2>
+      <div class="button-row">
+        <button id="rejoinServer">Rejoin Server</button>
+        <button id="joinAnotherServer">Join Another Server</button>
+        <button id="joinLowPlayerServer">Join Low Player Server</button>
+      </div>
+    </section>
+
+    <section class="panel server-panel">
+      <h2>Game Injection</h2>
+      <p class="disclaimer">This interface only simulates injecting a script into a joined game. It does not perform real Roblox injection.</p>
+      <div class="button-row">
+        <button id="injectCurrentGame">Simulate Inject into Joined Game</button>
+      </div>
+    </section>
+
+    <section class="panel output-panel">
+      <h2>Executor Status</h2>
+      <div id="statusLog" class="status-log">Ready.</div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
