@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:id="@+id/script_panel"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:elevation="12dp"
+        android:padding="12dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Albanian Executor"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:paddingBottom="8dp" />
+
+        <EditText
+            android:id="@+id/script_editor"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:hint="Enter Lua script" 
+            android:gravity="top"
+            android:background="@android:drawable/edit_text"
+            android:inputType="textMultiLine"
+            android:minLines="6"
+            android:maxLines="10" />
+
+        <Button
+            android:id="@+id/execute_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Execute"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_media_play"
+        app:backgroundTint="@android:color/holo_red_dark"
+        app:tint="@android:color/white" />
+
+</FrameLayout>
