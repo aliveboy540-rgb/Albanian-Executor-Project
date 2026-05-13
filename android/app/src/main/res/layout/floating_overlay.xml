@@ -28,12 +28,14 @@
             android:id="@+id/script_editor"
             android:layout_width="match_parent"
             android:layout_height="140dp"
-            android:hint="Enter Lua script" 
+            android:hint="Enter Lua script"
             android:gravity="top"
             android:background="@android:drawable/edit_text"
             android:inputType="textMultiLine"
             android:minLines="6"
-            android:maxLines="10" />
+            android:maxLines="10"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
 
         <Button
             android:id="@+id/execute_button"
